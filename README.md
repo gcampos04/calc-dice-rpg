@@ -48,10 +48,6 @@ Este projeto demonstra competências técnicas em:
 
 **Uma calculadora web especializada para sistemas personalizados de RPG**
 
-**👨‍💻 Desenvolvido por [SEU NOME AQUI](https://github.com/SEU-USUARIO-GITHUB)**
-
-[🚀 **Testar Online**](https://calc-dice-rpg.vercel.app) | [📖 **Documentação**](#como-usar) | [🛠️ **Desenvolvimento**](#desenvolvimento) | [🐙 **GitHub**](https://github.com/SEU-USUARIO-GITHUB)
-
 </div>
 
 </div>
@@ -250,12 +246,6 @@ Este projeto está sob a licença [MIT](LICENSE).
 
 **Desenvolvido com ❤️ para a comunidade RPG**
 
-**🧑‍💻 [SEU NOME AQUI]** - *Desenvolvedor Full Stack*
-
-- 🌐 **Website/Demo:** [calc-dice-rpg.vercel.app](https://calc-dice-rpg.vercel.app)
-- � **GitHub:** [@SEU-USUARIO-GITHUB](https://github.com/SEU-USUARIO-GITHUB)
-- 💼 **LinkedIn:** [Seu LinkedIn](https://linkedin.com/in/seu-linkedin)
-- �📧 **Contato:** [seu-email@exemplo.com](mailto:seu-email@exemplo.com)
 
 ### � **Sobre o Desenvolvedor:**
 Este projeto foi desenvolvido como demonstração de habilidades em:
