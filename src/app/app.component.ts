@@ -12,6 +12,7 @@ export class AppComponent {
   findNumbs: string | string[] = '';
   arrayEdit: string | string[] = '';
   result: string | number = '';
+  resultEmoji: string = '';
 
   constructor() {
     console.log('iniciou');
@@ -128,6 +129,33 @@ export class AppComponent {
     }
   }
 
+  getResultEmoji(arrayEdit: string[] | string, originalArray: string[]): string {
+    // Falha Crítica - todos os dados foram consumidos
+    if (Array.isArray(arrayEdit) && arrayEdit.length === 0) {
+      return '😈'; // Demoninho para falha crítica
+    }
+    
+    // Se não é array, é falha crítica (string 'Falha Crítica')
+    if (typeof arrayEdit === 'string') {
+      return '😈'; // Demoninho para falha crítica
+    }
+
+    // Acerto Crítico - quando sobram apenas números altos (8, 9, 10)
+    const highNumbers = arrayEdit.filter(num => parseInt(num) >= 8);
+    if (arrayEdit.length > 0 && highNumbers.length === arrayEdit.length && arrayEdit.length >= 2) {
+      return '🥳'; // Festa para acerto crítico
+    }
+
+    // Resultado muito bom (média >= 8)
+    const media = parseFloat(this.calcularMedia(arrayEdit));
+    if (media >= 7) {
+      return '😄'; // Muito feliz para resultados excelentes
+    }
+
+    // Resultado normal
+    return '🎲'; // Neutro - dado para resultado normal
+  }
+
   sendString(): void {
     console.log(this.inputString);
     let editString = this.cleanString(this.inputString);
@@ -141,5 +169,8 @@ export class AppComponent {
     let media = this.calcularMedia(editArray);
     console.log(media);
     this.result = media;
+    
+    // Define o emoji baseado no resultado
+    this.resultEmoji = this.getResultEmoji(editArray.length === 0 ? 'Falha Crítica' : editArray, array);
   }
 }
