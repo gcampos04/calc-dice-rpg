@@ -1,22 +1,44 @@
  <section class="container">
         <div class="card">
+            <header>
+                <h1 class="title">D10Roll Calc 🎲</h1>
+                <p class="subtitle">Calculadora de Dados para RPG - Simplifique seus jogos de mesa</p>
+            </header>
 
-            <h1 class="title">D10Roll Calc 🎲</h1>
+            <main>
+                <div class="area-input">
+                    <label for="diceInput" class="sr-only">Digite sua fórmula de dados</label>
+                    <input 
+                        id="diceInput"
+                        type="text" 
+                        class="custom-width" 
+                        [(ngModel)]="inputString" 
+                        placeholder="Digite o lance Ex. {(7+10)}"
+                        aria-describedby="inputHelp">
+                    <small id="inputHelp" class="help-text">Digite números entre parênteses ou chaves para calcular</small>
+                    <button (click)="sendString()" [disabled]="!inputString.trim()">Calcular Dados</button>
+                </div>
 
-            <div class="area-input">
-                <input type="text" class="custom-width" [(ngModel)]="inputString" placeholder="Digite o lance Ex. {(7+10)}">
-                <button (click)="sendString()">Enviar</button>
-            </div>
+                <div class="area-info" *ngIf="findNumbs">
+                    <div class="result-section">
+                        <h2 class="label">Números informados:</h2>
+                        <output class="result" aria-live="polite">{{ findNumbs }}</output>
+                    </div>
+                    
+                    <div class="result-section">
+                        <h2 class="label">Números editados:</h2>
+                        <output class="result" aria-live="polite">{{ arrayEdit }}</output>
+                    </div>
 
-            <div class="area-info">
-                <div class="label">Números informados:</div>
-                <div class="result">{{ findNumbs }}</div>
-                
-                <div class="label">Números editados:</div>
-                <div class="result">{{ arrayEdit }}</div>
+                    <div class="result-section">
+                        <h2 class="label">Resultado:</h2>
+                        <output class="result final-result" aria-live="polite">{{ result }}</output>
+                    </div>
+                </div>
+            </main>
 
-                <div class="label">Resultado:</div>
-                <div class="result">{{ result }}</div>
-            </div>
+            <footer class="app-footer">
+                <p>Ferramenta gratuita para jogadores de RPG de mesa</p>
+            </footer>
         </div>
     </section>
