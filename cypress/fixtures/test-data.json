@@ -1,20 +1,84 @@
 {
-  "testCases": [
+  "basicTests": [
     {
-      "input": "10+9+5",
-      "description": "Simple addition"
+      "input": "5 6 7",
+      "description": "Simple numbers without processing",
+      "expectedNumbers": ["5", "6", "7"],
+      "expectedResult": "6"
+    },
+    {
+      "input": "3 4 5",
+      "description": "Another simple case",
+      "expectedNumbers": ["3", "4", "5"],
+      "expectedResult": "4"
+    }
+  ],
+  "processTests": [
+    {
+      "input": "1 10",
+      "description": "1 consumes 10",
+      "expectedProcessed": "empty",
+      "expectedResult": "0"
+    },
+    {
+      "input": "1 9",
+      "description": "1 consumes 9",
+      "expectedProcessed": "empty",
+      "expectedResult": "0"
+    },
+    {
+      "input": "2 8",
+      "description": "2 consumes 8",
+      "expectedProcessed": "empty", 
+      "expectedResult": "0"
+    },
+    {
+      "input": "2 7",
+      "description": "2 consumes 7",
+      "expectedProcessed": "empty",
+      "expectedResult": "0"
+    }
+  ],
+  "complexTests": [
+    {
+      "input": "1 9 10",
+      "description": "1 prioritizes 10 over 9",
+      "expectedRemaining": ["9"],
+      "expectedResult": "9"
+    },
+    {
+      "input": "1 2 8 10",
+      "description": "All consumed - critical failure",
+      "expectedProcessed": "Falha Crítica",
+      "expectedResult": "0"
+    },
+    {
+      "input": "1 1 10 10",
+      "description": "Multiple pairs consumed",
+      "expectedProcessed": "empty",
+      "expectedResult": "0"
+    }
+  ],
+  "edgeCases": [
+    {
+      "input": "1",
+      "description": "Single 1 remains",
+      "expectedResult": "1"
+    },
+    {
+      "input": "2",
+      "description": "Single 2 remains", 
+      "expectedResult": "2"
     },
     {
       "input": "{(7+10)}",
-      "description": "Parentheses with brackets"
+      "description": "Brackets and parentheses",
+      "expectedNumbers": ["7", "10"]
     },
     {
-      "input": "1+2+3+4+5",
-      "description": "Multiple numbers"
-    },
-    {
-      "input": "[8+7+6]",
-      "description": "Square brackets"
+      "input": "[5+6+7]",
+      "description": "Square brackets",
+      "expectedNumbers": ["5", "6", "7"]
     }
   ]
 }

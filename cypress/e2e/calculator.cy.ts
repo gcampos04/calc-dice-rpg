@@ -18,13 +18,22 @@ describe('D10Roll Calculator', () => {
     cy.contains('Resultado:').should('be.visible')
   })
 
-  it('should handle parentheses input', () => {
-    cy.get('input[placeholder*="Digite o lance"]').type('{(7+10)}')
-    cy.get('button').contains('Enviar').click()
+  it('should handle parentheses input using custom command', () => {
+    // Using the custom command that handles special characters automatically
+    cy.calculateDice('{(7+10)}')
     
     // Verify the numbers are extracted
     cy.get('.result').first().should('contain', '7')
     cy.get('.result').first().should('contain', '10')
+  })
+
+  it('should handle brackets input using custom command', () => {
+    cy.calculateDice('[5+6+7]')
+    
+    // Verify the numbers are extracted
+    cy.get('.result').first().should('contain', '5')
+    cy.get('.result').first().should('contain', '6')
+    cy.get('.result').first().should('contain', '7')
   })
 
   it('should show results after calculation', () => {
