@@ -1,0 +1,97 @@
+.custom-width {
+    width: 300px;
+    /* Defina a largura desejada aqui */
+    margin-bottom: 20px;
+}
+
+.result {
+    height: 19px;
+    margin: 10px 0px 10px 0px;
+    background-color: rgba(22, 14, 65, 0.105);
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.title {
+    color: #bb154c;
+    font-family: fantasy;
+    font-weight: 400;
+    text-align: center;
+    background: #e5b05d;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #160e41;
+}
+
+/* Estilo para o input */
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #160e41;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #160e41;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+    border-color: #bb154c;
+    outline: none;
+}
+
+/* Estilo para o botão */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #160e41;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #bb154c;
+}
+
+
+.area-input{
+    margin-bottom: 20px;
+}
+
+.area-info {
+    .label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #160e41;
+    }
+    
+    .result {
+        margin-bottom: 15px;
+        
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+}
