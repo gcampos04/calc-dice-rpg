@@ -3,13 +3,56 @@
 <div align="center">
 
 ![RPG Dice Calculator](https://img.shields.io/badge/RPG-Dice%20Calculator-blueviolet?style=for-the-badge&logo=dice)
-![Angular](https://img.shields.io/badge/Angular-15.2-red?style=for-the-badge&logo=angular)
+![Angular](https://img.shields.io/ba### 🚀 **Sobre o Desenvolvedor:**
+Este projeto foi desenvolvido como demonstração de habilidades em:
+- ✅ **Angular & TypeScript** - Framework moderno e tipagem forte
+- ✅ **Testes E2E com Cypress** - Garantia de qualidade
+- ✅ **Clean Code** - Código limpo e documentado
+- ✅ **Deploy & DevOps** - CI/CD e hospedagem moderna
+- ✅ **UX/UI Design** - Interface intuitiva e responsiva
+
+### 🎯 **Outros Projetos:**
+Confira outros projetos no meu [GitHub](https://github.com/SEU-USUARIO-GITHUB) e conecte-se comigo no [LinkedIn](https://linkedin.com/in/seu-linkedin)!
+
+---
+
+## 🏆 **Destaque para Recrutadores**
+
+Este projeto demonstra competências técnicas em:
+
+### **🎨 Frontend Development:**
+- **Angular 15** com TypeScript para aplicações robustas
+- **SCSS** para estilização moderna e responsiva
+- **Componentização** e arquitetura modular
+- **Reactive Programming** com RxJS
+
+### **🧪 Quality Assurance:**
+- **Test-Driven Development** (TDD)
+- **Cypress E2E Testing** com 40+ cenários
+- **Cross-browser compatibility**
+- **Performance testing** e otimização
+
+### **🚀 DevOps & Deploy:**
+- **CI/CD Pipeline** com GitHub Actions
+- **Deploy automatizado** no Vercel
+- **SEO optimization** e meta tags
+- **Production-ready** com build otimizada
+
+### **💼 Soft Skills:**
+- **Documentação técnica** completa
+- **Código limpo** seguindo boas práticas
+- **Problem solving** com sistema complexo de regras
+- **UX thinking** para interface intuitivaular-15.2-red?style=for-the-badge&logo=angular)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
 ![Cypress](https://img.shields.io/badge/Cypress-14.5-green?style=for-the-badge&logo=cypress)
 
 **Uma calculadora web especializada para sistemas personalizados de RPG**
 
-[🚀 **Testar Online**](https://calc-dice-rpg.vercel.app) | [📖 **Documentação**](#como-usar) | [🛠️ **Desenvolvimento**](#desenvolvimento)
+**👨‍💻 Desenvolvido por [SEU NOME AQUI](https://github.com/SEU-USUARIO-GITHUB)**
+
+[🚀 **Testar Online**](https://calc-dice-rpg.vercel.app) | [📖 **Documentação**](#como-usar) | [🛠️ **Desenvolvimento**](#desenvolvimento) | [🐙 **GitHub**](https://github.com/SEU-USUARIO-GITHUB)
+
+</div>
 
 </div>
 
@@ -96,7 +139,7 @@ npm ou yarn
 ### **⚡ Instalação Rápida:**
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/calc-dice-rpg.git
+git clone https://github.com/SEU-USUARIO-GITHUB/calc-dice-rpg.git
 cd calc-dice-rpg
 
 # Instale as dependências
@@ -193,7 +236,7 @@ Contribuições são bem-vindas! Para contribuir:
 5. **📋 Abra** um Pull Request
 
 ### **🐛 Reportar Bugs:**
-Use as [Issues do GitHub](https://github.com/seu-usuario/calc-dice-rpg/issues) para reportar problemas.
+Use as [Issues do GitHub](https://github.com/SEU-USUARIO-GITHUB/calc-dice-rpg/issues) para reportar problemas.
 
 ---
 
@@ -207,9 +250,20 @@ Este projeto está sob a licença [MIT](LICENSE).
 
 **Desenvolvido com ❤️ para a comunidade RPG**
 
-- 🌐 **Website:** [calc-dice-rpg.vercel.app](https://calc-dice-rpg.vercel.app)
-- 📧 **Contato:** [seu-email@exemplo.com](mailto:seu-email@exemplo.com)
-- 🐙 **GitHub:** [@seu-usuario](https://github.com/seu-usuario)
+**🧑‍💻 [SEU NOME AQUI]** - *Desenvolvedor Full Stack*
+
+- 🌐 **Website/Demo:** [calc-dice-rpg.vercel.app](https://calc-dice-rpg.vercel.app)
+- � **GitHub:** [@SEU-USUARIO-GITHUB](https://github.com/SEU-USUARIO-GITHUB)
+- 💼 **LinkedIn:** [Seu LinkedIn](https://linkedin.com/in/seu-linkedin)
+- �📧 **Contato:** [seu-email@exemplo.com](mailto:seu-email@exemplo.com)
+
+### � **Sobre o Desenvolvedor:**
+Este projeto foi desenvolvido como demonstração de habilidades em:
+- ✅ **Angular & TypeScript** - Framework moderno e tipagem forte
+- ✅ **Testes E2E com Cypress** - Garantia de qualidade
+- ✅ **Clean Code** - Código limpo e documentado
+- ✅ **Deploy & DevOps** - CI/CD e hospedagem moderna
+- ✅ **UX/UI Design** - Interface intuitiva e responsiva
 
 ---
 
