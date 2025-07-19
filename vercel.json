@@ -1,0 +1,17 @@
+{
+  "routes": [
+    {
+      "src": "/sitemap.xml",
+      "headers": {
+        "Content-Type": "application/xml; charset=UTF-8",
+        "Cache-Control": "public, max-age=3600"
+      }
+    },
+    {
+      "src": "/robots.txt",
+      "headers": {
+        "Content-Type": "text/plain; charset=UTF-8"
+      }
+    }
+  ]
+}
