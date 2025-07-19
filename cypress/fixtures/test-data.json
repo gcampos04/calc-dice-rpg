@@ -1,0 +1,20 @@
+{
+  "testCases": [
+    {
+      "input": "10+9+5",
+      "description": "Simple addition"
+    },
+    {
+      "input": "{(7+10)}",
+      "description": "Parentheses with brackets"
+    },
+    {
+      "input": "1+2+3+4+5",
+      "description": "Multiple numbers"
+    },
+    {
+      "input": "[8+7+6]",
+      "description": "Square brackets"
+    }
+  ]
+}
