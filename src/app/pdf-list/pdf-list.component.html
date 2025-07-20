@@ -1,0 +1,28 @@
+<div class="pdf-list-container">
+  <div class="header">
+    <h1>📄 PDFs Disponíveis para Edição</h1>
+    <p>Selecione um PDF para visualizar e editar seus campos de formulário</p>
+  </div>
+
+  <div class="pdf-grid">
+    <button 
+      *ngFor="let pdf of availablePdfs" 
+      class="pdf-card"
+      (click)="openPdf(pdf.id)"
+    >
+      <div class="pdf-icon">📋</div>
+      <div class="pdf-info">
+        <h3>{{ pdf.name }}</h3>
+        <p *ngIf="pdf.description">{{ pdf.description }}</p>
+        <div class="pdf-actions">
+          <span class="btn-edit">✏️ Editar Campos</span>
+        </div>
+      </div>
+    </button>
+  </div>
+
+  <div *ngIf="availablePdfs.length === 0" class="no-pdfs">
+    <h3>Nenhum PDF encontrado</h3>
+    <p>Adicione arquivos PDF na pasta assets/archives/ para visualizá-los aqui.</p>
+  </div>
+</div>

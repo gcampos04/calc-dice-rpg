@@ -1,0 +1,79 @@
+<div class="pdf-viewer-container">
+  <div class="toolbar">
+    <div class="toolbar-section">
+      <button (click)="previousPage()" [disabled]="currentPage <= 1" class="btn btn-nav">
+        ⬅ Anterior
+      </button>
+      <span class="page-info">
+        {{ currentPage }} / {{ totalPages }}
+      </span>
+      <button (click)="nextPage()" [disabled]="currentPage >= totalPages" class="btn btn-nav">
+        Próxima ➡
+      </button>
+    </div>
+
+    <div class="toolbar-section">
+      <button (click)="zoomOut()" class="btn btn-zoom">🔍-</button>
+      <span class="zoom-info">{{ (scale * 100).toFixed(0) }}%</span>
+      <button (click)="zoomIn()" class="btn btn-zoom">🔍+</button>
+    </div>
+
+    <div class="toolbar-section">
+      <span class="pdf-title" *ngIf="currentPdf">📋 {{ currentPdf.name }}</span>
+    </div>
+
+    <div class="toolbar-section">
+      <button (click)="saveFormData()" class="btn btn-save">
+        � Salvar
+      </button>
+      <button (click)="clearForm()" class="btn btn-clear">
+        🗑️ Limpar
+      </button>
+      <button (click)="downloadPdf()" class="btn btn-download">
+        � Exportar
+      </button>
+    </div>
+  </div>
+
+  <div class="pdf-container">
+    <div class="pdf-wrapper">
+      <!-- Mensagem de carregamento -->
+      <div *ngIf="totalPages === 0" class="loading-message">
+        <h3>📄 Carregando PDF...</h3>
+        <p>Aguarde enquanto o PDF {{ currentPdf?.name || 'Pandora-Nath' }} é carregado.</p>
+        <div class="loading-spinner"></div>
+      </div>
+      
+      <!-- Canvas do PDF -->
+      <div class="pdf-canvas-container" *ngIf="totalPages > 0">
+        <canvas 
+          #pdfCanvas 
+          class="pdf-canvas"
+        ></canvas>
+      </div>
+      
+      <!-- Instruções para edição -->
+      <div class="edit-instructions" *ngIf="totalPages > 0">
+        <p>✏️ Clique nos campos azuis para editar as informações do formulário</p>
+        <p>💾 Use "Salvar" para manter suas alterações</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Painel lateral com lista de campos (opcional) -->
+  <div class="fields-panel" *ngIf="formFields.length > 0 && totalPages > 0">
+    <h3>📝 Campos do Formulário</h3>
+    <div class="field-list">
+      <div *ngFor="let field of formFields.slice(0, 5)" class="field-item">
+        <label [for]="'panel-' + field.id">{{ field.name }}:</label>
+        <input 
+          [id]="'panel-' + field.id"
+          [(ngModel)]="field.value" 
+          [type]="field.type"
+          class="field-input"
+          (input)="updateFormFieldElements()"
+        />
+      </div>
+    </div>
+  </div>
+</div>
